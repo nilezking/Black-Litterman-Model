@@ -1,10 +1,10 @@
-# Portfolio Optimization
+# Black-Litterman model
 
 ![Portfolio Chart](https://raw.githubusercontent.com/nilezking/Markowitz-Mean-Variance-Model/main/Figure_1.png)
 
 ## Overview
 
-This project implements portfolio optimization techniques including maximizing the Sharpe ratio, minimizing volatility, and generating the efficient frontier. It also includes visualization tools to plot the efficient frontier, maximum Sharpe ratio, minimum volatility, and correlation heatmap of asset returns. The portfolio optimization is performed using historical stock data and custom constraints, with the option to apply L2 regularization. Optimization process rely on numerical methods. Purpose of the project is to assist the portfolio manager in asset allocation.
+This project implements portfolio optimization techniques including maximizing the Sharpe ratio, minimizing volatility, and generating the efficient frontier. It also includes visualization tools to plot the efficient frontier, maximum Sharpe ratio, minimum volatility, and correlation heatmap of asset returns. The portfolio optimization is performed using historical stock data and custom constraints, with the option to apply L2 regularization. Optimization process rely on numerical methods. In addition to basic functionalities of Mean-Variance framework, this model allows user to apply Bayesian approach to asset allocation by including subjective views of certain assets and confidence on those views. Purpose of the project is to assist the portfolio manager in asset allocation.
 
 ## Features
 
@@ -14,16 +14,18 @@ This project implements portfolio optimization techniques including maximizing t
 - **Discrete Allocation:** Converts portfolio allocations into discrete stock units based on the total amount.
 - **Visualization:** Plots the efficient frontier, maximum Sharpe ratio, minimum volatility, and a correlation heatmap.
 - **Flexible Constraints:** Supports portfolio weight constraints and L2 regularization to punish extreme weights.
+- **Subjective Views:** Supports user's own views on asset performance by using a views matrix.
+- **Confidence in Views:** Supports relative and absolute confidence in user's views.
 
 ## Installation
 
 Clone this repository:
 
-    git clone https://github.com/nilezking/Markowitz-Mean-Variance-Model.git
+    git clone https://github.com/nilezking/Black-Litterman-Model.git
 
 Navigate to the project directory:
 
-    cd Markowitz-Mean-Variance-Model
+    cd Black-Litterman-Model
 
 Install the required dependencies on your virtual environment:
 
@@ -31,18 +33,7 @@ Install the required dependencies on your virtual environment:
 
 ## Usage
 
-To run the portfolio optimization and generate the results, call the main() function with a list of stock tickers and the number of years of historical data you'd like to download.
-
-    from mean_variance_optimizer import main
-
-Define the list of stock tickers and the number of years of historical data
-
-    tickers = ['AAPL', 'MSFT', 'GOOGL', 'AMZN']
-    years = 5
-
-Run the main function to perform the optimization and plotting
-
-    main(tickers, years)
+To run the portfolio optimization and generate the results, run the Jupyter Notebook file from IDE of your choice. Parameters can be tweaked inside main function and function call.
 
 ### Parameters
 
